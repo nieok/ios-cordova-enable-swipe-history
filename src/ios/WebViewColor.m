@@ -8,9 +8,9 @@
     NSString *hexColor = [command.arguments objectAtIndex:0];
 
     UIColor *theColor = [self colorFromHexString:hexColor];
-    self.webView.allowsBackForwardNavigationGestures = true
     self.webView.backgroundColor = theColor; 
     self.viewController.view.backgroundColor = theColor;
+	self.viewController.view.allowsBackForwardNavigationGestures = true;
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self writeJavascript:[pluginResult toSuccessCallbackString:callbackId]];
