@@ -10,7 +10,6 @@
     UIColor *theColor = [self colorFromHexString:hexColor];
     self.webView.backgroundColor = theColor; 
     self.viewController.view.backgroundColor = theColor;
-	self.viewController.view.allowsBackForwardNavigationGestures = true;
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self writeJavascript:[pluginResult toSuccessCallbackString:callbackId]];
